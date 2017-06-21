@@ -1,0 +1,2 @@
+class GenderNoIndex < ApplicationRecord
+end

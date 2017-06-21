@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV["DB_POOL"] || 10 %>
+  username: brianbroderick
+  password: <%= ENV["MASTER_DB_PASSWORD"] %>
+  host: localhost
+
+development:
+  <<: *default
+  database: pg_deep_dive
+
+test:
+  <<: *default
+  database: pg_deep_dive_test
+
+production:
+  <<: *default
+  database: pg_deep_dive_prod
